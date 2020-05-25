@@ -6,12 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="NatCSS.css" >
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/94909f1aa7.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     </head>
-    <body>
+    <body style="font-family: 'Roboto Slab', serif;" ng-app="myApp" ng-controller="myCtrl">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
@@ -36,11 +38,7 @@
                 </li>
                 &nbsp; &nbsp;
                 <li class="nav-item">
-<<<<<<< HEAD
-                    <a class="nav-link" href="#prices">Prices</a>
-=======
                     <a class="nav-link" href="#pricing">Pricing</a>
->>>>>>> 339b53a417302ad3ec6d8f12f2baa9fc370b8fb5
                 </li>
                 &nbsp; &nbsp;
                 <li class="nav-item">
@@ -68,7 +66,7 @@
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item active" style="background-image: url('images/ashwini-chaudhary-Iu6parQAO-U-unsplash.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <strong><h2 class="display-4"><a href="#prices">Clean for as low as $20</a></h2></strong>
+                        <strong><h2 class="display-4"><a href="#pricing">Clean for as low as $20</a></h2></strong>
                         <p class="lead">Ready. Set. Clean</p>
                     </div>
                 </div>
@@ -87,12 +85,12 @@
                     </div>
                 </div>
                 <!-- Slide Four - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('images/the-honest-company-Ua9AK-pZ5cw-unsplash.jpg')">
+                <!-- <div class="carousel-item" style="background-image: url('images/the-honest-company-Ua9AK-pZ5cw-unsplash.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h2 class="display-4">Fourth Slide</h2>
                         <p class="lead">This is a description for the fourth slide.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -189,7 +187,7 @@
 
         <!-- Pricing section -->
         
-        <section  id="pricing" style="background-color: rgb(232, 240, 252);">
+        <section  id="pricing" style="background-color: rgb(246, 249, 255);">
             <div class="container">     
                 <br>
                 <h2 style="text-align: center; ">Pricing</h2>
@@ -198,7 +196,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="sel1">Choose service:</label>
-                            <select class="form-control" id="sel1">
+                            <select class="form-control">
                                 <option>Regular Domestic Cleaning</option>
                                 <option>Move in/out</option>
                                 <option>Office Cleaning</option>
@@ -206,11 +204,20 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="sel1">
+                            <select class="form-control">
                                 <option>Regular Domestic Cleaning</option>
                                 <option>Move in/out</option>
                                 <option>Office Cleaning</option>
                                 <option>Construction Cleaning</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sel1">Type of Move in/out service:</label>
+                            <select class="form-control">
+                                <option>Relocation cleaning service</option>
+                                <option>Before & after party cleaning</option>
+                                <option>Spring & Summer cleaning</option>
+                                <option>Stain remover</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -260,7 +267,7 @@
 
         <!-- Career section -->
         
-        <section id="careers" style="background-color: rgb(214, 213, 213);">
+        <section id="careers" style="background-color: rgb(236, 236, 236);">
             <div class="container" >
                 <br>
                 <h2 style="text-align: center;">Careers</h2>
@@ -368,5 +375,14 @@
             </div>
         </section>
         <!-- End of footer section -->
+
+        <!--AngularJs Script-->
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+            
+            });
+        </script>
+        <!--End of AngularJs Script-->
     </body>
 </html>
