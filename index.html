@@ -189,8 +189,8 @@
                 <div class="card border-0">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="sel1">Choose service:</label>
-                            <select class="form-control">
+                            <label>Choose service:</label>
+                            <select class="form-control" ng-model="service" ng-change="serviceChange()">
                                 <option>Regular Domestic Cleaning</option>
                                 <option>Move in/out Cleaning</option>
                                 <option>Office Cleaning</option>
@@ -198,207 +198,216 @@
                             </select>
                         </div>
                          <div class="form-group">
-                            <label for="sel1">Check list based on Selected Service:</label>
+                            <label>Check list based on {{ service }} Service:</label>
                         </div> 
-                        <div class="form-group">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Bedroom
-                                            </label>
+                        <div ng-show="domesticShow">
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Bedroom
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="2">
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="2">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Sitting area/dinning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="1">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Sitting area/dinning
-                                            </label>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Kitchen
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="1">
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="1">
+                                    </div>  
+                                </div>
+                            </div> 
+                            <br><br>
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Light Bathroom/Toilet cleaning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="1">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Kitchen
-                                            </label>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Deep Bathroom/Toilet cleaning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="1">
-                                        </div>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div> 
-                        <br><br>
-                        <div class="form-group">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Light Bathroom/Toilet cleaning
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="1">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Deep Bathroom/Toilet cleaning
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Stain remover
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Stain remover
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <br><br>
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Washing dishes (machine)
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Washing dishes (hand wash)
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Microwave cleaning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>      
+                            <br><br>    
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Laundry
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Refrigerator cleaning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Kitchen hood cleaning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div> 
+                            <br><br>    
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Couch cleaning
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                <label class="form-check-label">
+                                                    Oven cleaning service
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-check-input" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>         
                         </div>
-                        <br><br>
-                        <div class="form-group">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Washing dishes (machine)
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Washing dishes (hand wash)
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Microwave cleaning
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                </div>   
-                            </div>
-                        </div>      
-                        <br><br>    
-                        <div class="form-group">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Laundry
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Refrigerator cleaning
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Kitchen hood cleaning
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                </div>   
-                            </div>
-                        </div> 
-                        <br><br>    
-                        <div class="form-group">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Couch cleaning
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                            <label class="form-check-label">
-                                                Oven cleaning service
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" class="form-check-input" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>         
-                        <!-- <div class="form-group">
-                            <label for="sel1">Type of Move in/out service:</label>
-                            <select class="form-control">
-                                <option>Relocation cleaning service</option>
-                                <option>Before & after party cleaning</option>
-                                <option>Spring & Summer cleaning</option>
-                                <option>Stain remover</option>
-                            </select>
-                        </div>  -->
+                        <div ng-show="moveShow">
+                            <div class="form-group">
+                                <label for="sel1">Type of Move in/out service:</label>
+                                <select class="form-control">
+                                    <option>Relocation cleaning service</option>
+                                    <option>Before & after party cleaning</option>
+                                    <option>Spring & Summer cleaning</option>
+                                    <option>Stain remover</option>
+                                </select>
+                            </div> 
+                            <div class="form-group">
+                                <label for="sel1">room(s)</label>
+                                <input type="number" class="form-control" value="2">
+                            </div> 
+                        </div>
+                        
                         <!-- <div class="form-group">
                             <label for="sel1">Total Price: $20</label>
                         </div> -->
@@ -561,6 +570,27 @@
         <script>
             var app = angular.module('myApp', []);
             app.controller('myCtrl', function($scope) {
+                $scope.domesticShow = false ;
+                $scope.moveShow = false ;
+                $scope.serviceChange = function(){
+                    if($scope.service == "Regular Domestic Cleaning"){
+                        $scope.domesticShow = true ;
+                        $scope.moveShow = false ;
+                    }else if($scope.service == "Move in/out Cleaning"){
+                        $scope.domesticShow = false ;
+                        $scope.moveShow = true ;
+
+                    }else if($scope.service == "Office Cleaning"){
+                        $scope.domesticShow = false ;
+                        $scope.moveShow = false ;
+
+                    }else if($scope.service == "Construction Cleaning"){
+                        $scope.domesticShow = false ;
+                        $scope.moveShow = false ;
+
+                    }
+                }
+
             
             });
         </script>
