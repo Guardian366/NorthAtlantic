@@ -23,7 +23,7 @@
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home
                         <!-- <span class="sr-only">(current)</span> -->
                         </a>
@@ -198,7 +198,7 @@
                             </select>
                         </div>
                          <div class="form-group">
-                            <label>Check list based on {{ service }} Service:</label>
+                            <label> {{ serviceType }}</label>
                         </div> 
                         <div ng-show="domesticShow">
                             <div class="form-group">
@@ -206,7 +206,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" class="form-check-input" value="">
+                                                <input type="checkbox" class="form-check-input" value="1" checked=checked>
                                                 <label class="form-check-label">
                                                     Bedroom
                                                 </label>
@@ -217,7 +217,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" class="form-check-input" value="">
+                                                <input type="checkbox" class="form-check-input" value=""checked=checked>
                                                 <label class="form-check-label">
                                                     Sitting area/dinning
                                                 </label>
@@ -228,7 +228,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" class="form-check-input" value="">
+                                                <input type="checkbox" class="form-check-input" value="" checked=checked>
                                                 <label class="form-check-label">
                                                     Kitchen
                                                 </label>
@@ -246,7 +246,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" class="form-check-input" value="">
+                                                <input type="checkbox" class="form-check-input" value="" checked=checked>
                                                 <label class="form-check-label">
                                                     Light Bathroom/Toilet cleaning
                                                 </label>
@@ -257,7 +257,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
-                                                <input type="checkbox" class="form-check-input" value="">
+                                                <input type="checkbox" class="form-check-input" value="" >
                                                 <label class="form-check-label">
                                                     Deep Bathroom/Toilet cleaning
                                                 </label>
@@ -407,11 +407,11 @@
                                 <input type="number" class="form-control" value="2">
                             </div> 
                         </div>
-                        
-                        <!-- <div class="form-group">
-                            <label for="sel1">Total Price: $20</label>
-                        </div> -->
                         <br><br>
+                        <div class="form-group">
+                            <label> <h4> {{ price }} </h4></label>
+                        </div>
+                        
                         <div class="form-group">
                             <button class="btn btn-primary btn-block">Book Service</button>
                         </div>
@@ -424,7 +424,6 @@
         <!-- End of pricing section -->
 
         <!-- Contact section -->
-       
         <section class="container" id="contact">
             <br>
             <h2 style="text-align: center;">Contact Us</h2>
@@ -560,8 +559,7 @@
                         © 2020 North Atlantic Cleaning.
                     </div>
                 </div>
-
-                    <br><br><br>
+                <br>
             </div>
         </section>
         <!-- End of footer section -->
@@ -572,22 +570,31 @@
             app.controller('myCtrl', function($scope) {
                 $scope.domesticShow = false ;
                 $scope.moveShow = false ;
+                $scope.serviceType = "" ;
+                $scope.price = "" ;
                 $scope.serviceChange = function(){
                     if($scope.service == "Regular Domestic Cleaning"){
                         $scope.domesticShow = true ;
                         $scope.moveShow = false ;
+                        $scope.serviceType = "Check List based on Regular Domestic Cleaning Service" ;
+                        $scope.price = "Total price: $21" ;
                     }else if($scope.service == "Move in/out Cleaning"){
                         $scope.domesticShow = false ;
                         $scope.moveShow = true ;
+                        $scope.serviceType = "Check List based on Move in/out Cleaning Service" ;
+                        $scope.price = "" ;
 
                     }else if($scope.service == "Office Cleaning"){
                         $scope.domesticShow = false ;
                         $scope.moveShow = false ;
+                        $scope.serviceType = "Contact us directly at services@northatlanticcleaning.com for more details" ;
+                        $scope.price = "" ;
 
                     }else if($scope.service == "Construction Cleaning"){
                         $scope.domesticShow = false ;
                         $scope.moveShow = false ;
-
+                        $scope.serviceType = "Contact us directly at services@northatlanticcleaning.com for more details" ;
+                        $scope.price = "" ;
                     }
                 }
 
