@@ -13,6 +13,7 @@
         <script src="https://kit.fontawesome.com/94909f1aa7.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     </head>
+
     <body style="font-family: 'Roboto Slab', serif;" ng-app="myApp" ng-controller="myCtrl">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -51,103 +52,85 @@
         
 
     <!-- carousel section -->
-    <div id="fadeCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="images/ashwini-chaudhary-Iu6parQAO-U-unsplash.jpg" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <strong><h2 class="display-4"><a href="#pricing">Clean for as low as $20</a></h2></strong>
-                    <p class="lead">Ready. Set. Clean</p>
-                </div>
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <!-- <div class="carousel-item " style="background-image: url('images/ashwini-chaudhary-Iu6parQAO-U-unsplash.jpg')">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="display-4"><a href="#pricing">Clean for as low as $20</a></h3>
+                <h3 class="display-4" style="color: rgb(71, 102, 238);">Clean for as low as $20</h3>
+                <h3><a class="btn btn-primary btn-lg" href="#pricing">Get Started</a></h3>
+                <p class="lead"><a href="#pricing">Ready. Set. Clean</a></p>
+              </div>
+            </div> -->
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div class="carousel-item active" style="background-image: url('images/the-honest-company-Ua9AK-pZ5cw-unsplash.jpg')">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="display-4" style="color: rgb(13, 13, 14);">Clean for as low as $20</h3>
+                <h3><a class="btn btn-primary btn-lg" href="#pricing">Get Started</a></h3>
+                <!-- <h3 class="display-4"><a href="#pricing">Clean for as low as $20</a></h3> -->
+                <!-- <p class="lead"><a href="#pricing">Ready. Set. Clean</a></p> -->
+              </div>
             </div>
-    
-            <div class="carousel-item">
-                <img class="d-block w-100" src="images/the-honest-company-Ua9AK-pZ5cw-unsplash.jpg" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <strong><h2 class="display-4"><a href="#pricing">Clean for as low as $20</a></h2></strong>
-                    <p class="lead">Ready. Set. Clean</p>
-                </div>
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('images/cdc-VRpjDw3WqqI-unsplash.jpg')">
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h3 class="display-4"><a href="#pricing">Clean for as low as $20</a></h3> -->
+                <h3 class="display-4" style="color: black;">Clean for as low as $20</h3>
+                <h3><a class="btn btn-primary btn-lg" href="#pricing">Get Started</a></h3>
+                <!-- <p class="lead"><a href="#pricing">Ready. Set. Clean</a></p> -->
+              </div>
             </div>
-    
-            <div class="carousel-item">
-                <img class="d-block w-100" src="images/cdc-VRpjDw3WqqI-unsplash.jpg" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <strong><h2 class="display-4"><a href="#pricing">Clean for as low as $20</a></h2></strong>
-                    <p class="lead">Ready. Set. Clean</p>
-                </div>
-            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
         </div>
+    </header>
+    <br><br>
     
-        <a class="carousel-control-prev" href="#fadeCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#fadeCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <!-- Slide One - Set the background image for this slide in the line below 
-                <div class="carousel-item active" style="background-image: url('images/ashwini-chaudhary-Iu6parQAO-U-unsplash.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <strong><h2 class="display-4"><a href="#pricing">Clean for as low as $20</a></h2></strong>
-                        <p class="lead">Ready. Set. Clean</p>
-                    </div>
-                </div>
-                <!-- Slide Two - Set the background image for this slide in the line below 
-                <div class="carousel-item" style="background-image: url('images/cdc-jjrXvzbqC5E-unsplash.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Ready </h2>
-                        <p class="lead">This is a description for the second slide.</p>
-                    </div>
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below 
-                <div class="carousel-item" style="background-image: url('images/cdc-VRpjDw3WqqI-unsplash.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Third Slide</h2>
-                        <p class="lead">This is a description for the third slide.</p>
-                    </div>
-                </div>
-                <!-- Slide Four - Set the background image for this slide in the line below 
-                <!-- <div class="carousel-item" style="background-image: url('images/the-honest-company-Ua9AK-pZ5cw-unsplash.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Fourth Slide</h2>
-                        <p class="lead">This is a description for the fourth slide.</p>
-                    </div>
-                </div> 
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-            </a>
-        </div> -->   
-    <!-- End of carousel -->
 
         <!-- About section -->
-        <section id="about" class="container-fluid">
-            <br><br>
-            <div>
-                <!-- <h2 style="text-align: center;">About Us</h2> -->
-                <br><br>
+        <!-- merh 
+        <section id="about" class="py-5">
+            <div class="container">
+              <h1 class="font-weight-light">Half Page Image Slider</h1>
+              <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
+            </div>
+          </section>
+        -->
+        <section id="about" class="container-fluid" class="py-5">
+            <br>
+            <!-- <h2 style="text-align: center;">About</h2>
+            <br> -->
+            <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div><img src='images/cleaningService.jpg' width='100%' height='100%'></div>
+                        <div><img src='images/sponge.png' width='100%' height='100%'></div>
                     </div>
                     <div class="col">
                         <div>
-                            <p style="text-align: center;">Yadah, yadah, yadah. One day you'll leave this earth behind, so leave a life you will remember. These are the things, my father told me. Dung dung dururu duru dung dung dururu.</p>
+                            <h4 style="text-align: center;">What makes us different ?</h4>
+                            <p style="text-align: center;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -460,7 +443,9 @@
         <!-- End of pricing section -->
 
         <!-- Contact section -->
-        <section class="container" id="contact">
+        <!-- <section class="container" id="contact"> -->
+       
+        <!-- <section class="container" id="contact">
             <br>
             <h2 style="text-align: center;">Contact Us</h2>
             <br>
@@ -468,27 +453,124 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="usr">Name:</label>
-                        <input type="text" class="form-control" id="usr">
+                        <input type="text" class="form-control" id="name">
                     </div>
                     <div class="form-group">
                         <label for="usr">Email:</label>
-                        <input type="text" class="form-control" id="usr">
+                        <input type="text" class="form-control" id="email">
                     </div>
                     <div class="form-group">
                         <label for="usr">Phone number:</label>
-                        <input type="tel" class="form-control" id="usr">
+                        <input type="tel" class="form-control" id="phoneNum" pattern="^\d{4}-\d{3}-\d{4}$" required>
                     </div>
                     <div class="form-group">
                         <label for="comment">Message:</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <textarea class="form-control" rows="5" id="message"></textarea>
                     </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary"> Submit </button>
+
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary" onclick="validateForm();">Send</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- End of contact section -->
+        <!--Section: Contact v.2-->
+        
+        <section class="container" id="contact">
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+            <!--Section description-->
+            <div class="card border-0">
+                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                    a matter of hours to help you.</p>
+                <div class="card-body"></div>
+                    <form id="contact-form" name="contact-form" action="norAtl.php" method="POST">
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <label for="name" class="">Your name</label>
+                                    <input type="text" id="name" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <label for="email" class="">Your email</label>
+                                    <input type="text" id="email" name="email" class="form-control">
+                                </div>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <label for="subject" class="">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <label for="phoneNum" class="">Phone Number</label>
+                                    <input type="tel" id="phoneNum" name="phoneNum" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <label for="message">Your message</label>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                    
+                    <br>
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary" onclick="validateForm();">Send</a>
+                    </div>
+                    <div class="status"></div>
+                    <br>
+                </div>
+            </div>
+                <!--Grid column
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                            <p>Address Here</p>
+                        </li>
+
+                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                            <p>Phone Number Here</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                            <p>Email Here</p>
+                        </li>
+                    </ul>
+                </div>
+                Grid column-->
+        </section>
+
 
         <!-- Career section -->
         
@@ -582,14 +664,11 @@
                             <li class="nav-item">
                               <a class="nav-link" href="#contact"  style="color: white;">Contact</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#"  style="color: white;">Careers</a>
-                            </li> -->
                         </ul>
                     </div>
                     <div class="col">
                         <h6>Contact</h6>
-                        <h6>serviceS@northatlanticcleaning.com</h6>
+                        <h6>services@northatlanticcleaning.com</h6>
                     </div>
                     <div class="col">
                         © 2020 North Atlantic Cleaning.
@@ -655,5 +734,38 @@
             });
         </script>
         <!--End of AngularJs Script-->
+
+
+        <!--Form Validation Script-->
+        <script>
+            function validateForm() {
+            document.getElementById('status').innerHTML = "Sending...";
+            formData = {
+                'name'     : $('input[name=name]').val(),
+                'subject'  : $('input[name=subject]').val(),
+                'email'    : $('input[name=email]').val(),
+                'phoneNum'  : $('input[name=phoneNum]').val(),
+                'message'  : $('textarea[name=message]').val()
+                };
+        
+        
+            $.ajax({
+            url : "mail.php",
+            type: "POST",
+            data : formData,
+            success: function(data, textStatus, jqXHR)
+                {
+                    $('#status').text(data.message);
+                    if (data.code) //If mail was sent successfully, reset the form.
+                    $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+                },
+            error: function (jqXHR, textStatus, errorThrown)
+                {
+                    $('#status').text(jqXHR);
+                }
+            });
+        }
+        </script>
+        
     </body>
 </html>
