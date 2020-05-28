@@ -427,16 +427,20 @@
                         <div ng-show="moveShow">
                             <div class="form-group">
                                 <label for="sel1">Type of Move in/out service:</label>
-                                <select class="form-control">
+                                <select class="form-control" ng-model="moveService" ng-change="moveServiceChange()">
                                     <option>Relocation cleaning service</option>
                                     <option>Before & after party cleaning</option>
                                     <option>Spring & Summer cleaning</option>
                                     <option>Stain remover</option>
                                 </select>
                             </div> 
-                            <div class="form-group">
+                            <div class="form-group" ng-show="moveRoomShow">
                                 <label for="sel1">room(s)</label>
                                 <input type="number" class="form-control" value="2">
+                            </div> 
+                            <div class="form-group" ng-show="moveStainShow">
+                                <label for="sel1">stain(s)</label>
+                                <input type="number" class="form-control" value="1">
                             </div> 
                         </div>
                         <br><br>
@@ -602,8 +606,25 @@
             app.controller('myCtrl', function($scope) {
                 $scope.domesticShow = false ;
                 $scope.moveShow = false ;
+                $scope.moveStainShow = false ;
+                $scope.moveRoomShow = false ;
                 $scope.serviceType = "" ;
                 $scope.price = "" ;
+                $scope.moveServiceChange = function(){
+                    if($scope.moveService == "Relocation cleaning service"){
+                        $scope.moveRoomShow = true ;
+                        $scope.moveStainShow = false ;
+                    }else if($scope.moveService == "Before & after party cleaning"){
+                        $scope.moveRoomShow = true ;
+                        $scope.moveStainShow = false ;
+                    }else if($scope.moveService == "Spring & Summer cleaning"){
+                        $scope.moveRoomShow = true ;
+                        $scope.moveStainShow = false ;
+                    }else if($scope.moveService == "Stain remover"){
+                        $scope.moveRoomShow = false ;
+                        $scope.moveStainShow = true ;
+                    }
+                }
                 $scope.serviceChange = function(){
                     if($scope.service == "Regular Domestic Cleaning"){
                         $scope.domesticShow = true ;
